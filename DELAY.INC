@@ -1,8 +1,18 @@
-; Delay header file
-; Contains DELAY_US function,
-; Max duration 0xFFFF in Microseconds
-; .SET DELAY = time   variable for time in delay
+; File Name : DELAY.INC
+; Author : DEEPAK KUMAR
+; Date : 05-05-2017
+; Details : Header file for all the delay function
+;	    Supported in All AVR Microcontroller
+
+; FUNCTION NAME: DELAY_US 
+; ARGUMENT: DELAY in microseconds (use ".SET DELAY = 23" command)
+; MAX DELAY: 0xFFFF or 65000 Microseconds
+; MIN DELAY: 10 microseconds
+; 
+; === Very low error in Timing, eg. for 1000uS actual delay was 1001uS ==
 ;------------------------------------------
+
+
 ;Delay subroutine
 DELAY_US:PUSH R23
 	LDI R23,5

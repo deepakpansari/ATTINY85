@@ -1,8 +1,9 @@
 ; Delay header file
 ; Contains DELAY_US function,
-; Max duration 0xFF in Microseconds
+; Max duration 0xFFFF in Microseconds
 ; .SET DELAY = time   variable for time in delay
 ;------------------------------------------
+;Delay subroutine
 DELAY_US:PUSH R23
 	LDI R23,5
 D:	DEC R23
@@ -31,4 +32,6 @@ D_L2:   LDI R24,$FF
 D_L3:   DEC R23
         BRNE D_L3
         RJMP D_L1
-
+	
+	
+;-------END OF THE HEADER--------------------
